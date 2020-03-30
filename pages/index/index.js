@@ -42,9 +42,9 @@ Page({
     })
 
     wx.uploadFile({
-      url: 'https://proloving.imwork.net/uploadImg', //仅为示例
+      url: 'https://proloving.imwork.net/recognition/', //仅为示例
       filePath: that.data.imgUrl,
-      name: 'parkingPhoto',
+      name: 'pic',
       success: function (res) {
         console.log(res)
         wx.showToast({
@@ -61,7 +61,5 @@ Page({
       }
     })
   }
-
-
 
 })
