@@ -1,0 +1,13 @@
+<view class="container">
+  <!-- 上传图片 -->
+  <button type="primary" size="default" bindtap="selectImg">选择图片</button> 
+  <view class="uploader">
+    <!-- <view class="uploader-text" bindtap="selectImg">
+      <text>选择图片</text>
+    </view> -->
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+  <button class="uploadbtn" type="primary" wx:if="{{imgUrl}}" size="default" bindtap="uploadImg">上传图片</button>
+</view>
