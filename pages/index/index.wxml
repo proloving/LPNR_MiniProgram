@@ -9,5 +9,7 @@
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
   </view>
-  <button class="uploadbtn" type="primary" wx:if="{{imgUrl}}" size="default" bindtap="uploadImg">上传图片</button>
+  <button class="uploadbtn" type="primary" wx:if="{{imgUrl}}" size="default" bindtap="uploadImg">检测图片</button>
+ 
+  <view wx:if="{{result}}">  结果： {{result}}</view>
 </view>

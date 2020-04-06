@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrl: null
+    imgUrl: null,
+    result:null
   },
 
   /**
@@ -51,6 +52,11 @@ Page({
           icon: 'none',
           title: '上传成功',
         })
+        if(res.statusCode==200){
+          that.setData({
+            result: res.data,
+          });
+        }
       },
       fail:function(res){
         console.log(res)
