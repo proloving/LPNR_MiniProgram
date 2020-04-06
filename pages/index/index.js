@@ -7,7 +7,8 @@ Page({
    */
   data: {
     imgUrl: null,
-    result:null
+    result:null,
+    showResul:false
   },
 
   /**
@@ -27,7 +28,8 @@ Page({
         console.log('select image success')
         console.log(res)
         that.setData({
-          imgUrl: res.tempFilePaths[0],
+          imgUrl: res.tempFilePaths[0], 
+          showResul:false
         });
       },
       fail: function() {
@@ -54,7 +56,8 @@ Page({
         })
         if(res.statusCode==200){
           that.setData({
-            result: res.data,
+            result: unescape(res.data.replace(/\"/g, "").replace(/\\/g, "%")),
+            showResul: true
           });
         }
       },

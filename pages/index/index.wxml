@@ -11,5 +11,5 @@
   </view>
   <button class="uploadbtn" type="primary" wx:if="{{imgUrl}}" size="default" bindtap="uploadImg">检测图片</button>
  
-  <view wx:if="{{result}}">  结果： {{result}}</view>
+  <view wx:if="{{showResul}}">  结果： {{result}}</view>
 </view>
